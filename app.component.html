@@ -1,0 +1,18 @@
+<h2>TitleCase</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mydata of data1">
+      <td>{{mydata.id}}</td>
+      <td>{{mydata.name}}</td>
+    </tr>
+  </tbody>
+</table>
+<div [hidden]="isShow">
+    <button (click)="toggleDisplay()" (click)="addNew()" class="css">Get TitleCase</button>
+</div>

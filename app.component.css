@@ -1,0 +1,7 @@
+.css:hover{
+    cursor:pointer;
+    color: crimson;
+    background-color: khaki;
+    border-radius: 15px;
+    margin-top: 5px;
+}
