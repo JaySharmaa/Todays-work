@@ -1,3 +1,37 @@
-<button routerLink="home">Home</button>
-<button routerLink="contactus">Contact Us</button>
-<router-outlet></router-outlet>
+<h1>{{title}}</h1>
+<br>
+<button (click)="getData('Jay')">Get Name</button>
+<input type="text" #id (keyup)="getData(id.value)" >
+
+<h1  (mouseover)="getData('mouse hovered')">Hello</h1>
+<br>
+<input type="text" #id1 placeholder="Enter a Name">
+<!-- we can also get value of placeholder and name by replacing .value -->
+<button (click)="getVal(id1.value)">Click</button>
+<br> <br>
+<p>The Name Entered is : {{display}}</p>
+
+<h1 class="heading">This is Heading</h1>
+
+<app-login></app-login>
+
+
+<!-- property binding and interpolation -->
+<!-- property binding can take boolean values and interpolation takes string and num only -->
+
+<input type="text" disabled="{{disable}}" value="{{name}}">
+<br><br>
+<input type="text" [disabled]= disable [value]= name>
+
+
+<!-- if else statement -->
+
+<h1 *ngIf="show =='Jay'; then ifloop else elseloop"></h1>
+
+<ng-template #ifloop>
+    <h1>It is Jay</h1>
+</ng-template>
+
+<ng-template #elseloop>
+  <h1>It is not Jay</h1>
+</ng-template>
